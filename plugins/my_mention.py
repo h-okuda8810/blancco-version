@@ -11,11 +11,9 @@ import re
 options = Options()
 options.add_argument('--headless') #headlessにするといちいちseleniumが開かなくなって裏でスクレイピングするようになる
 
-
 driver = webdriver.Chrome('chromedriver.exeのパスを記述',options=options)
 
-
-
+#slackでバージョンと打たれたとき起動するようにする
 @respond_to('バージョン')
 def mention_func(message):
 
