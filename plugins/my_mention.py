@@ -7,11 +7,12 @@ from selenium import webdriver
 from time import sleep
 from selenium.webdriver.chrome.options import Options
 import re
+
 options = Options()
-options.add_argument('--headless')
+options.add_argument('--headless') #headlessにするといちいちseleniumが開かなくなって裏でスクレイピングするようになる
 
 
-driver = webdriver.Chrome('Z:\chromedriver',options=options)
+driver = webdriver.Chrome('chromedriver.exeのパスを記述',options=options)
 
 
 
