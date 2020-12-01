@@ -11,4 +11,4 @@ slackでblanccoのバージョンを教えてくれるもの
 * PyCharm 2020.2.3 (Community Edition)
 # Note
 chromedriver.exeはタスクマネージャー等でみて過去に使ったやつは消していかないといけない。
-消さないとエラーが起こる
+消さないとエラーが起こるので注意
