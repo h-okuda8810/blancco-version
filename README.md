@@ -10,6 +10,7 @@ slackでblanccoのバージョンを教えてくれるもの
 # Requirement
 * Python 3.8.3
 * PyCharm 2020.2.3 (Community Edition)
+* Slack
 # Note
 chromedriver.exeはタスクマネージャー等でみて過去に使ったやつは消していかないといけない。
 消さないとエラーが起こるので注意
