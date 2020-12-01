@@ -16,7 +16,7 @@ driver = webdriver.Chrome('chromedriver.exeのパスを記述',options=options)
 #slackでバージョンと打たれたとき起動するようにする
 @respond_to('バージョン')
 def mention_func(message):
-
+    message.reply("確認しています・・・")
     driver.get('https://support.blancco.com/pages/viewpage.action?pageId=26214508')
 
 #4秒くらい待たないと拾ってくれない
@@ -42,12 +42,12 @@ def mention_func(message):
         message.reply("バージョンの更新はありません。" + "\n" + "<" + blancco_version.text + ">")
 
     elif re.search(r"Blancco Mobile Diagnostics and Erasure", blancco_version.text):   #更新はblanccoのバージョン更新だけ上書き保存
-            new_version = open(blancco_file, "w", encoding='utf-8')
-            new_version.write(blancco_version.text)
-            new_version.close()
-            message.reply("新しいバージョンの更新があります！" + "\n" + "<" + blancco_version.text + ">" +"\n" +"(" +  blancco_version_url.get_attribute("href") + ")")
+        new_version = open(blancco_file, "w", encoding='utf-8')
+        new_version.write(blancco_version.text)
+        new_version.close()
+        message.reply("新しいバージョンの更新があります！" + "\n" + "<" + blancco_version.text + ">" +"\n" +"(" +  blancco_version_url.get_attribute("href") + ")")
 
     else:
-         message.reply("バージョンの更新はありません。" + "\n" + "<" + blancco_version.text + ">")
+        message.reply("バージョンの更新はありません。" + "\n" + "<" + blancco_version.text + ">")
 
 
