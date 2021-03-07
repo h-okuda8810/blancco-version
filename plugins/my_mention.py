@@ -14,7 +14,7 @@ options.add_argument('--headless')
 @respond_to('バージョン')
 def mention_func(message):
     message.reply("確認しています・・・")
-    driver = webdriver.Chrome('Z:\chromedriver', options=options)
+    driver = webdriver.Chrome('chromedriverの場所', options=options)
     driver.get('https://support.blancco.com/pages/viewpage.action?pageId=26214508')
 
     # 4秒くらい待たないと拾ってくれない
